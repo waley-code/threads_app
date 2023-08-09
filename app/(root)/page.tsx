@@ -1,5 +1,3 @@
-
-
 import { currentUser } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
 
@@ -7,7 +5,7 @@ import ThreadCard from "@/components/cards/ThreadCard";
 // import Pagination from "@/components/shared/Pagination";
 
 import { fetchUser } from "@/lib/actions/user.actions";
-import { fetchPosts } from "@/lib/actions/threads.actions";
+import { fetchPosts } from "@/lib/actions/thread.actions";
 // import ThreadCard from "@/components/cards/ThreadCard";
 
 async function Home({
@@ -25,7 +23,6 @@ async function Home({
     searchParams.page ? +searchParams.page : 1,
     30
   );
-  
 
   return (
     <>
